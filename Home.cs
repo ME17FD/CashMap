@@ -20,6 +20,8 @@ namespace CashMap
         public Home()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.icon;
+
             chart1.MouseMove += chart1_MouseMove;
 
         }
@@ -199,7 +201,7 @@ namespace CashMap
                         montant DECIMAL(10, 2) NOT NULL,
                         date_transaction DATETIME NOT NULL,
                         montant_budget INT,
-                        description VARCHAR(10),
+                        description VARCHAR(100),
                         type CHAR(7) NOT NULL CHECK (type IN ('depense', 'revenu')) 
                     )
                 END";
@@ -254,13 +256,13 @@ namespace CashMap
 
         private void dateFin_ValueChanged(object sender, EventArgs e)
         {
-            DateTime dateDebutc = dateDebut.Value; // Assuming the DateTimePicker for start date is named dateDebut
-            DateTime dateFinc = dateFin.Value; // Assuming the DateTimePicker for end date is named dateFin
+            DateTime dateDebutc = dateDebut.Value; 
+            DateTime dateFinc = dateFin.Value; 
 
             // Check if dateDebut > dateFin
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("The end date must be later than or equal to the start date.", "Invalid Date Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateFin.Value = dateDebutc.AddDays(1); // Reset dateFin to match dateDebut
                 return;
             }
@@ -270,14 +272,14 @@ namespace CashMap
 
         private void dateDebut_ValueChanged(object sender, EventArgs e)
         {
-            DateTime dateDebutc = dateDebut.Value; // Assuming the DateTimePicker for start date is named dateDebut
-            DateTime dateFinc = dateFin.Value; // Assuming the DateTimePicker for end date is named dateFin
+            DateTime dateDebutc = dateDebut.Value; 
+            DateTime dateFinc = dateFin.Value; 
 
             // Check if dateDebut > dateFin
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("The start date must be earlier than or equal to the end date.", "Invalid Date Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dateDebut.Value = dateFinc.AddDays(-1); // Reset dateDebut to match dateFin
+                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dateDebut.Value = dateFinc.AddDays(-1); 
                 return;
             }
 

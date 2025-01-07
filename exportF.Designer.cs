@@ -38,7 +38,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(112, 265);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Location = new System.Drawing.Point(128, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(202, 63);
             this.button1.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 405);
+            this.label2.Location = new System.Drawing.Point(59, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 24;
@@ -60,7 +61,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(411, 405);
+            this.label1.Location = new System.Drawing.Point(371, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 16);
             this.label1.TabIndex = 23;
@@ -69,22 +70,25 @@
             // dateFin
             // 
             this.dateFin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.dateFin.Location = new System.Drawing.Point(476, 399);
+            this.dateFin.Location = new System.Drawing.Point(436, 190);
             this.dateFin.Name = "dateFin";
             this.dateFin.Size = new System.Drawing.Size(200, 22);
             this.dateFin.TabIndex = 22;
+            this.dateFin.ValueChanged += new System.EventHandler(this.dateFin_ValueChanged);
             // 
             // dateDebut
             // 
             this.dateDebut.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.dateDebut.Location = new System.Drawing.Point(170, 399);
+            this.dateDebut.Location = new System.Drawing.Point(130, 190);
             this.dateDebut.Name = "dateDebut";
             this.dateDebut.Size = new System.Drawing.Size(200, 22);
             this.dateDebut.TabIndex = 21;
+            this.dateDebut.ValueChanged += new System.EventHandler(this.dateDebut_ValueChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(398, 265);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button3.Location = new System.Drawing.Point(436, 82);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(209, 63);
             this.button3.TabIndex = 25;
@@ -96,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(720, 241);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

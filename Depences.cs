@@ -19,6 +19,8 @@ namespace CashMap
         public Depences()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.icon;
+
         }
 
         private void LoadDataIntoGridView()

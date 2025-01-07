@@ -19,6 +19,8 @@ namespace CashMap
         public Revenus()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.icon;
+
         }
 
         private void transactionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)

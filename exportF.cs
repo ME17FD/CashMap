@@ -22,6 +22,8 @@ namespace CashMap
         public exportF()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.icon;
+
         }
 
 
@@ -29,6 +31,8 @@ namespace CashMap
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DateTime startDate = dateDebut.Value.Date;
+            DateTime endDate = dateFin.Value.Date;
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Filter = "Excel Files|*.xlsx",          // Set filter to only show PDF files
@@ -47,7 +51,9 @@ namespace CashMap
             }
 
                 // Query to fetch data from Transactions table
-                string query = "SELECT id_transaction, montant, date_transaction, montant_budget, description, type FROM Transactions";
+            string query = @"SELECT id_transaction, montant, date_transaction, montant_budget, description, type 
+                FROM Transactions
+                WHERE date_transaction >= @StartDate AND date_transaction <= @EndDate";
 
             // Fetch data into a DataTable
             DataTable transactionsTable = new DataTable();
@@ -55,6 +61,8 @@ namespace CashMap
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@StartDate", startDate);
+                    command.Parameters.AddWithValue("@EndDate", endDate);
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     adapter.Fill(transactionsTable);
                 }
@@ -201,6 +209,36 @@ namespace CashMap
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
+        }
+
+        
+        private void dateFin_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dateDebutc = dateDebut.Value; // Assuming the DateTimePicker for start date is named dateDebut
+            DateTime dateFinc = dateFin.Value; // Assuming the DateTimePicker for end date is named dateFin
+
+            // Check if dateDebut > dateFin
+            if (dateDebutc >= dateFinc)
+            {
+                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dateFin.Value = dateDebutc.AddDays(1); // Reset dateFin to match dateDebut
+                return;
+            }
+
+        }
+
+        private void dateDebut_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dateDebutc = dateDebut.Value; 
+            DateTime dateFinc = dateFin.Value; 
+
+            if (dateDebutc >= dateFinc)
+            {
+                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dateDebut.Value = dateFinc.AddDays(-1); 
+                return;
+            }
+
         }
     }
 }
