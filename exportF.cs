@@ -115,7 +115,7 @@ namespace CashMap
                 workbook.SaveAs(filePath);
 
                 // Inform the user
-                MessageBox.Show($"Excel file has been created at: {filePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Fichier Excel Creé à: {filePath}", "Export réussi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -141,12 +141,9 @@ namespace CashMap
                 pdf a = new pdf();
                 a.GenerateFinancialReport(startDate, endDate, filePath);
 
-                MessageBox.Show($"Report generated and saved at: {filePath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Rapport PDF crée à: {filePath}", "Succeés", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                MessageBox.Show("No file selected. Report generation canceled.", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
         private void exportF_Load(object sender, EventArgs e)
@@ -179,10 +176,7 @@ namespace CashMap
 
 
                         }
-                        else
-                        {
-                            MessageBox.Show("No valid date found in the database.");
-                        }
+                        
                     }
                     using (SqlCommand command = new SqlCommand(query_min, connection))
                     {
@@ -198,15 +192,12 @@ namespace CashMap
                             dateDebut.MinDate = dbDate;
                             dateFin.MinDate = dbDate;
                         }
-                        else
-                        {
-                            MessageBox.Show("No valid date found in the database.");
-                        }
+                        
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
         }
@@ -220,7 +211,7 @@ namespace CashMap
             // Check if dateDebut > dateFin
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La date de début doit être antérieure à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateFin.Value = dateDebutc.AddDays(1); // Reset dateFin to match dateDebut
                 return;
             }
@@ -234,7 +225,7 @@ namespace CashMap
 
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La date de début doit être antérieure à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateDebut.Value = dateFinc.AddDays(-1); 
                 return;
             }

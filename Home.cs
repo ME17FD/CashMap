@@ -133,7 +133,7 @@ namespace CashMap
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
         }
@@ -215,7 +215,6 @@ namespace CashMap
                         command.ExecuteNonQuery();
                     }
                 }
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -228,7 +227,7 @@ namespace CashMap
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error ensuring database: {ex.Message}");
+                MessageBox.Show($"Erreur base de données: {ex.Message}");
             }
         }
 
@@ -262,7 +261,7 @@ namespace CashMap
             // Check if dateDebut > dateFin
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La date de début doit être antérieure à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateFin.Value = dateDebutc.AddDays(1); // Reset dateFin to match dateDebut
                 return;
             }
@@ -278,7 +277,7 @@ namespace CashMap
             // Check if dateDebut > dateFin
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("La date de début doit être antérieure ou égale à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La date de début doit être antérieure à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateDebut.Value = dateFinc.AddDays(-1); 
                 return;
             }
@@ -316,7 +315,7 @@ namespace CashMap
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
         }

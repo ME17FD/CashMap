@@ -53,7 +53,7 @@ namespace CashMap
             catch (Exception ex)
             {
                 // Handle any errors that occur during data retrieval
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"Erreur: {ex.Message}");
             }
         }
 
@@ -101,7 +101,7 @@ namespace CashMap
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
         }
@@ -114,7 +114,7 @@ namespace CashMap
             // Validate the montant input
             if (!decimal.TryParse(montantT.Text, out decimal montant) || montant <= 0)
             {
-                MessageBox.Show("Invalid amount. Please enter a positive number for the montant.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur: Montant invalide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -138,8 +138,8 @@ namespace CashMap
                         // Compare the selected date with the maximum date
                         if (dateTransaction <= maxDate)
                         {
-                            MessageBox.Show($"The transaction date must be after the most recent transaction date: {maxDate}.",
-                                            "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"La transaction doit avoir lieu apres: {maxDate}.",
+                                            "Date invalide", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -179,7 +179,7 @@ namespace CashMap
                     // Refresh the grid view and reset the form
                     LoadDataIntoGridView();
                     date_init();
-                    MessageBox.Show("Transaction successfully added.");
+                    MessageBox.Show("Transaction effectué.");
                 }
                 catch (Exception ex)
                 {
