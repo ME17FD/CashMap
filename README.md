@@ -76,8 +76,21 @@ Une application de gestion financière permettant de suivre, organiser et optimi
 4. **Gérer les Budgets**
    - Allez dans la section "Gestion des budgets" pour ajuster les limites de dépenses et suivre l'évolution de vos budgets.
 
+## Captures d'écrans
+
+![Screenshot (17)](https://github.com/user-attachments/assets/5ada8eab-e644-4cca-813f-b217b082c49b)
+
+![Screenshot (18)](https://github.com/user-attachments/assets/d37e1782-9dde-49d1-b572-e34d5926b62e)
+
+![Screenshot (19)](https://github.com/user-attachments/assets/f77999d5-9adc-4f61-bbef-6b96e10bc52f)
+
+![Screenshot (20)](https://github.com/user-attachments/assets/889e2422-029f-4a9d-ba3e-27b1f898d24e)
+
+![image](https://github.com/user-attachments/assets/537bcf38-7173-4ac0-8c8b-1feb65c81740)
+
+![image](https://github.com/user-attachments/assets/b2aa3376-a578-4ff7-9a34-963a9095c66d)
 
 
 ## Auteurs
 
-- **Nom de l'auteur** - *Développeur principal* - [Mehdi FADDAK](https://github.com/ME17FD/)
+- Mehdi FADDAK  [Mehdi FADDAK](https://github.com/ME17FD/)
