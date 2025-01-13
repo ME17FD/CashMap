@@ -197,7 +197,6 @@ namespace CashMap
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
         }

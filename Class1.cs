@@ -95,13 +95,13 @@ namespace CashMap
                                 currentX += columnWidths[3];
 
                                 gfx.DrawRectangle(XPens.Black, currentX, currentY, columnWidths[4], rowHeight);
-                                gfx.DrawString("", contentFont, XBrushes.Black, new XRect(currentX, currentY, columnWidths[4], rowHeight), XStringFormats.Center);
+                                gfx.DrawString("-", contentFont, XBrushes.Black, new XRect(currentX, currentY, columnWidths[4], rowHeight), XStringFormats.Center);
 
                             }
                             else
                             {
                                 gfx.DrawRectangle(XPens.Black, currentX, currentY, columnWidths[3], rowHeight);
-                                gfx.DrawString("", contentFont, XBrushes.Black, new XRect(currentX, currentY, columnWidths[3], rowHeight), XStringFormats.Center);
+                                gfx.DrawString("-", contentFont, XBrushes.Black, new XRect(currentX, currentY, columnWidths[3], rowHeight), XStringFormats.Center);
                                 currentX += columnWidths[3];
 
                                 gfx.DrawRectangle(XPens.Black, currentX, currentY, columnWidths[4], rowHeight);
@@ -114,9 +114,7 @@ namespace CashMap
                     }
 
                     // Calculate and display capital and final balance
-                    decimal totalCapital = dt.AsEnumerable().Sum(r => r.Field<decimal>("montant"));
 
-                    gfx.DrawString($"Capital: {totalCapital} Dh", headerFont, XBrushes.Black, new XRect(startX, currentY + 20, page.Width, 20), XStringFormats.TopLeft);
                     gfx.DrawString($"Solde final: {finalBalance} Dh", headerFont, XBrushes.Black, new XRect(startX, currentY + 40, page.Width, 20), XStringFormats.TopLeft);
 
                     // Save the PDF

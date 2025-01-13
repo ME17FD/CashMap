@@ -16,7 +16,7 @@ namespace CashMap
 {
     public partial class Home : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+        string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseU"].ConnectionString;
         public Home()
         {
             InitializeComponent();
@@ -133,7 +133,6 @@ namespace CashMap
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
         }
@@ -214,7 +213,9 @@ namespace CashMap
                     {
                         command.ExecuteNonQuery();
                     }
+                    connection.Close();
                 }
+                connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
