@@ -33,8 +33,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.Accueil = new System.Windows.Forms.ToolStripMenuItem();
             this.Acceuil = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,25 +71,12 @@
             this.Gestion});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.menuStrip2.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(181, 594);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(234, 731);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // toolStripTextBox3
-            // 
-            this.toolStripTextBox3.BackColor = System.Drawing.SystemColors.Menu;
-            this.toolStripTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox3.CausesValidation = false;
-            this.toolStripTextBox3.Font = new System.Drawing.Font("Transcity", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTextBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.toolStripTextBox3.Name = "toolStripTextBox3";
-            this.toolStripTextBox3.ReadOnly = true;
-            this.toolStripTextBox3.Size = new System.Drawing.Size(170, 40);
-            this.toolStripTextBox3.Text = "CashMap";
-            this.toolStripTextBox3.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripTextBox1
             // 
@@ -100,8 +87,21 @@
             this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.ReadOnly = true;
-            this.toolStripTextBox1.Size = new System.Drawing.Size(170, 40);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(221, 50);
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.BackColor = System.Drawing.SystemColors.Menu;
+            this.toolStripTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox3.CausesValidation = false;
+            this.toolStripTextBox3.Font = new System.Drawing.Font("Transcity", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.ReadOnly = true;
+            this.toolStripTextBox3.Size = new System.Drawing.Size(221, 50);
+            this.toolStripTextBox3.Text = "CashMap";
+            this.toolStripTextBox3.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripTextBox2
             // 
@@ -112,7 +112,7 @@
             this.toolStripTextBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.ReadOnly = true;
-            this.toolStripTextBox2.Size = new System.Drawing.Size(170, 40);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(221, 50);
             this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Accueil
@@ -166,10 +166,9 @@
             this.Solde_V.AutoSize = true;
             this.Solde_V.BackColor = System.Drawing.SystemColors.Control;
             this.Solde_V.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Solde_V.Location = new System.Drawing.Point(109, 384);
-            this.Solde_V.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Solde_V.Location = new System.Drawing.Point(145, 473);
             this.Solde_V.Name = "Solde_V";
-            this.Solde_V.Size = new System.Drawing.Size(32, 13);
+            this.Solde_V.Size = new System.Drawing.Size(37, 16);
             this.Solde_V.TabIndex = 22;
             this.Solde_V.Text = "0 DH";
             // 
@@ -180,10 +179,9 @@
             this.sold.BackColor = System.Drawing.SystemColors.Control;
             this.sold.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.sold.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sold.Location = new System.Drawing.Point(13, 382);
-            this.sold.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sold.Location = new System.Drawing.Point(17, 470);
             this.sold.Name = "sold";
-            this.sold.Size = new System.Drawing.Size(109, 17);
+            this.sold.Size = new System.Drawing.Size(127, 20);
             this.sold.TabIndex = 21;
             this.sold.Text = "Solde Actuel :";
             // 
@@ -191,10 +189,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(259, 537);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(345, 661);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Date:";
             // 
@@ -202,30 +199,29 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(493, 537);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(657, 661);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.Size = new System.Drawing.Size(15, 16);
             this.label1.TabIndex = 19;
             this.label1.Text = "à";
             // 
             // dateFin
             // 
             this.dateFin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.dateFin.Location = new System.Drawing.Point(541, 532);
-            this.dateFin.Margin = new System.Windows.Forms.Padding(2);
+            this.dateFin.Location = new System.Drawing.Point(721, 655);
+            this.dateFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateFin.Name = "dateFin";
-            this.dateFin.Size = new System.Drawing.Size(151, 20);
+            this.dateFin.Size = new System.Drawing.Size(200, 22);
             this.dateFin.TabIndex = 18;
             this.dateFin.ValueChanged += new System.EventHandler(this.dateFin_ValueChanged);
             // 
             // dateDebut
             // 
             this.dateDebut.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.dateDebut.Location = new System.Drawing.Point(312, 532);
-            this.dateDebut.Margin = new System.Windows.Forms.Padding(2);
+            this.dateDebut.Location = new System.Drawing.Point(416, 655);
+            this.dateDebut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateDebut.Name = "dateDebut";
-            this.dateDebut.Size = new System.Drawing.Size(151, 20);
+            this.dateDebut.Size = new System.Drawing.Size(200, 22);
             this.dateDebut.TabIndex = 17;
             this.dateDebut.ValueChanged += new System.EventHandler(this.dateDebut_ValueChanged);
             // 
@@ -258,8 +254,8 @@
             this.chart1.Cursor = System.Windows.Forms.Cursors.Cross;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(242, 32);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
+            this.chart1.Location = new System.Drawing.Point(323, 39);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -269,7 +265,7 @@
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(733, 490);
+            this.chart1.Size = new System.Drawing.Size(977, 603);
             this.chart1.TabIndex = 16;
             this.chart1.Text = "chart1";
             // 
@@ -279,10 +275,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(841, 254);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1121, 313);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 23;
             // 
             // label5
@@ -292,10 +287,9 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 428);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(17, 527);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 17);
+            this.label5.Size = new System.Drawing.Size(190, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Nombre de revenus : ";
             // 
@@ -306,12 +300,11 @@
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 483);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(17, 594);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 17);
+            this.label6.Size = new System.Drawing.Size(198, 20);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Nombre de revenus : ";
+            this.label6.Text = "Nombre de dépenses :";
             // 
             // NRevenus
             // 
@@ -319,10 +312,9 @@
             this.NRevenus.AutoSize = true;
             this.NRevenus.BackColor = System.Drawing.SystemColors.Control;
             this.NRevenus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NRevenus.Location = new System.Drawing.Point(171, 431);
-            this.NRevenus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NRevenus.Location = new System.Drawing.Point(228, 530);
             this.NRevenus.Name = "NRevenus";
-            this.NRevenus.Size = new System.Drawing.Size(13, 13);
+            this.NRevenus.Size = new System.Drawing.Size(14, 16);
             this.NRevenus.TabIndex = 29;
             this.NRevenus.Text = "0";
             // 
@@ -332,18 +324,17 @@
             this.NDepenses.AutoSize = true;
             this.NDepenses.BackColor = System.Drawing.SystemColors.Control;
             this.NDepenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NDepenses.Location = new System.Drawing.Point(171, 486);
-            this.NDepenses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NDepenses.Location = new System.Drawing.Point(228, 598);
             this.NDepenses.Name = "NDepenses";
-            this.NDepenses.Size = new System.Drawing.Size(13, 13);
+            this.NDepenses.Size = new System.Drawing.Size(14, 16);
             this.NDepenses.TabIndex = 30;
             this.NDepenses.Text = "0";
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 594);
+            this.ClientSize = new System.Drawing.Size(1343, 731);
             this.Controls.Add(this.NDepenses);
             this.Controls.Add(this.NRevenus);
             this.Controls.Add(this.label6);
@@ -357,6 +348,7 @@
             this.Controls.Add(this.dateDebut);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.menuStrip2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashMap";
