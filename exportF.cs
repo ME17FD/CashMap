@@ -139,7 +139,7 @@ namespace CashMap
                 DateTime startDate = dateDebut.Value;
                 DateTime endDate = dateFin.Value;
                 pdf a = new pdf();
-                a.GenerateFinancialReport(startDate, endDate, filePath);
+                a.GenerateFinancialReportGraphs(startDate, endDate, filePath);
 
                 MessageBox.Show($"Rapport PDF crée à: {filePath}", "Succeés", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -159,6 +159,25 @@ namespace CashMap
                     string query_max = "SELECT MAX(date_transaction) FROM Transactions";
                     string query_min = "SELECT MIN(date_transaction) FROM Transactions";
                     connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query_min, connection))
+                    {
+
+                        // Execute the query and retrieve the date
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && DateTime.TryParse(result.ToString(), out DateTime dbDate))
+                        {
+                            // Assign the retrieved date to the DateTimePicker
+                            dateDebut.Value = dbDate;
+                            dateDebut.MinDate = dbDate;
+                            dateFin.MinDate = dbDate;
+
+                        }
+
+                    }
+
+
                     using (SqlCommand command = new SqlCommand(query_max, connection))
                     {
 
@@ -176,24 +195,9 @@ namespace CashMap
 
 
                         }
-                        
+
                     }
-                    using (SqlCommand command = new SqlCommand(query_min, connection))
-                    {
 
-                        // Execute the query and retrieve the date
-                        object result = command.ExecuteScalar();
-
-                        if (result != null && DateTime.TryParse(result.ToString(), out DateTime dbDate))
-                        {
-                            // Assign the retrieved date to the DateTimePicker
-                            dateDebut.Value = dbDate;
-
-                            dateDebut.MinDate = dbDate;
-                            dateFin.MinDate = dbDate;
-                        }
-                        
-                    }
                 }
                 catch (Exception ex)
                 {
@@ -201,7 +205,7 @@ namespace CashMap
             }
         }
 
-        
+
         private void dateFin_ValueChanged(object sender, EventArgs e)
         {
             DateTime dateDebutc = dateDebut.Value; // Assuming the DateTimePicker for start date is named dateDebut
@@ -210,7 +214,6 @@ namespace CashMap
             // Check if dateDebut > dateFin
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("La date de début doit être antérieure à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateFin.Value = dateDebutc.AddDays(1); // Reset dateFin to match dateDebut
                 return;
             }
@@ -224,7 +227,6 @@ namespace CashMap
 
             if (dateDebutc >= dateFinc)
             {
-                MessageBox.Show("La date de début doit être antérieure à la date de fin.", "Plage de dates invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateDebut.Value = dateFinc.AddDays(-1); 
                 return;
             }

@@ -71,10 +71,10 @@
             this.Gestion});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.menuStrip2.Margin = new System.Windows.Forms.Padding(15);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(234, 731);
+            this.menuStrip2.Size = new System.Drawing.Size(228, 731);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -87,7 +87,7 @@
             this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.ReadOnly = true;
-            this.toolStripTextBox1.Size = new System.Drawing.Size(221, 50);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(215, 50);
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripTextBox3
@@ -99,7 +99,7 @@
             this.toolStripTextBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.ReadOnly = true;
-            this.toolStripTextBox3.Size = new System.Drawing.Size(221, 50);
+            this.toolStripTextBox3.Size = new System.Drawing.Size(215, 50);
             this.toolStripTextBox3.Text = "CashMap";
             this.toolStripTextBox3.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -112,7 +112,7 @@
             this.toolStripTextBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.ReadOnly = true;
-            this.toolStripTextBox2.Size = new System.Drawing.Size(221, 50);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(215, 50);
             this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Accueil
@@ -257,6 +257,7 @@
             this.chart1.Location = new System.Drawing.Point(323, 39);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
+            series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.IsVisibleInLegend = false;
@@ -348,7 +349,7 @@
             this.Controls.Add(this.dateDebut);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashMap";
