@@ -78,15 +78,19 @@ Une application de gestion financière permettant de suivre, organiser et optimi
 
 ## Captures d'écrans
 
-![Screenshot (17)](https://github.com/user-attachments/assets/5ada8eab-e644-4cca-813f-b217b082c49b)
+![Screenshot (25)](https://github.com/user-attachments/assets/14f9a567-653e-4db2-a9b5-a2a952d5303f)
 
-![Screenshot (18)](https://github.com/user-attachments/assets/d37e1782-9dde-49d1-b572-e34d5926b62e)
+![Screenshot (24)](https://github.com/user-attachments/assets/f0ae0f5c-e133-469a-a168-c8ee8bb4b540)
 
-![Screenshot (19)](https://github.com/user-attachments/assets/f77999d5-9adc-4f61-bbef-6b96e10bc52f)
+![Screenshot (23)](https://github.com/user-attachments/assets/70948c03-50d9-4679-ad2c-ba40ef14d2fb)
 
-![Screenshot (20)](https://github.com/user-attachments/assets/889e2422-029f-4a9d-ba3e-27b1f898d24e)
+![Screenshot (22)](https://github.com/user-attachments/assets/432a7b50-4ca5-46ad-9705-de888f18f6d4)
 
-![image](https://github.com/user-attachments/assets/537bcf38-7173-4ac0-8c8b-1feb65c81740)
+![financial_report2_page-0001](https://github.com/user-attachments/assets/a1d5f454-d9cd-4969-9a22-5da69a5360ae)
+Page 1
+
+![financial_report2_page-0002](https://github.com/user-attachments/assets/165ebf3f-be7f-441a-949f-2a1026ff41f5)
+Page 2
 
 ![image](https://github.com/user-attachments/assets/b2aa3376-a578-4ff7-9a34-963a9095c66d)
 
